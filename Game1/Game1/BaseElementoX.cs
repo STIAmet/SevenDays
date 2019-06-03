@@ -1,0 +1,62 @@
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Game1
+{
+    class BaseElementoX
+    {
+        public int xBase;
+        public int yBase;
+        public int xTamanho;
+        public int yTamanho;
+        public Texture2D textura;
+        public Color cor;
+
+        public BaseElementoX(int xBasinha, int yBasinha, int xTamainho, int yTamainho, Texture2D text, Color corzinha)
+        {
+            xBase = xBasinha;
+            yBase = yBasinha;
+            xTamanho = xTamainho;
+            yTamanho = yTamainho;
+            textura = text;
+            cor = corzinha;
+        }
+
+        public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime,heroi personagem)
+        {
+            if(Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Right))
+                {
+                // Direita
+                if (Keyboard.GetState().IsKeyDown(Keys.Right))
+                {
+                    if (personagem.Posicao.X >= (0.7 * personagem.xFixoCenario))
+                    {
+                        xBase -= (int)(personagem.Velocidade.X * (gameTime.ElapsedGameTime.TotalSeconds));
+                    }
+                }
+                else
+                {
+                    if (personagem.Posicao.X <= (0.1 * personagem.xFixoCenario))
+                    {
+                        xBase += (int)(personagem.Velocidade.X * (gameTime.ElapsedGameTime.TotalSeconds));
+                    }
+                }
+            }
+            if(xBase <= xTamanho*-1)
+            {
+                xBase = personagem.xFixoCenario + xTamanho;
+            }
+            else if(xBase >= xTamanho + personagem.xFixoCenario)
+            {
+                xBase = -xTamanho;
+            }
+            spriteBatch.Draw(textura, new Rectangle(xBase, yBase, xTamanho, yTamanho), cor);
+        }
+    }
+}

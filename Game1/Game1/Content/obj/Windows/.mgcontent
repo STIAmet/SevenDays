@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/../../Background.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/arma.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/back.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/bruxa1.jpg</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/espada.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/forest-game-background-2d.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/idle001.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/idle002.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/idle003.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/idle004.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/poção.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/run001.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/run002.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/run003.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/run004.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/run005.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/run006.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/run007.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/run008.png</File>
+    <File>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/score.spritefont</File>
+  </SourceFiles>
+  <DestFiles>
+    <File>Background.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
