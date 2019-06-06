@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Adélia/Desktop/Game1/Game1/Content/background.png</SourceFile>
+  <SourceFile>C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/background.png</SourceFile>
   <SourceTime>2019-05-29T19:08:27.1069942-03:00</SourceTime>
-  <DestFile>C:/Users/Adélia/Desktop/Game1/Game1/Content/bin/Windows/Content/background.xnb</DestFile>
-  <DestTime>2019-06-03T04:43:33.7708556-03:00</DestTime>
+  <DestFile>C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/bin/Windows/Content/background.xnb</DestFile>
+  <DestTime>2019-06-06T11:31:07.1591768-03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2019-05-28T14:47:12-03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

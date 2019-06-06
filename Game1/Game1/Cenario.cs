@@ -16,7 +16,7 @@ namespace Game1
         public int yTamanho;
         public Texture2D textura;
         public Color cor;
-        
+
         public Cenario(int xPosicaod, int yPosicaod, Texture2D text,Color corzinha,int xTamainho, int yTamainho)
         {
             xPosicao = xPosicaod;
@@ -25,11 +25,13 @@ namespace Game1
             cor = corzinha;
             xTamanho = xTamainho;
             yTamanho = yTamainho;
+
+
         }
 
         public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            spriteBatch.Draw(textura, new Rectangle(xPosicao,yPosicao,xTamanho,yTamanho),cor);
+            spriteBatch.Draw(textura, new Rectangle(xPosicao, yPosicao, xTamanho, yTamanho), cor);
         }
     }
 }

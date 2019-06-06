@@ -1,6 +1,10 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Adélia/Desktop/Game1/Game1/Content/../../Background.png","C:/Users/Adélia/Desktop/Game1/Game1/Content/bin/Windows/Content/Background.xnb","TextureProcessor","Texture2DContent",40146,460885,0,1831368
-"C:/Users/Adélia/Desktop/Game1/Game1/Content/back.png","C:/Users/Adélia/Desktop/Game1/Game1/Content/bin/Windows/Content/back.xnb","TextureProcessor","Texture2DContent",109518,3603685,0,1270906
-"C:/Users/Adélia/Desktop/Game1/Game1/Content/background.png","C:/Users/Adélia/Desktop/Game1/Game1/Content/bin/Windows/Content/background.xnb","TextureProcessor","Texture2DContent",42019,1280085,0,0510383
-"C:/Users/Adélia/Desktop/Game1/Game1/Content/espada.png","C:/Users/Adélia/Desktop/Game1/Game1/Content/bin/Windows/Content/espada.xnb","TextureProcessor","Texture2DContent",11402,85249,0,0050063
-"C:/Users/Adélia/Desktop/Game1/Game1/Content/forest-game-background-2d.png","C:/Users/Adélia/Desktop/Game1/Game1/Content/bin/Windows/Content/forest-game-background-2d.xnb","TextureProcessor","Texture2DContent",20014,582485,0,021015
+"C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/../../Background.png","C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/bin/Windows/Content/Background.xnb","TextureProcessor","Texture2DContent",40146,460885,0,1471044
+"C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/arma.png","C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/bin/Windows/Content/arma.xnb","TextureProcessor","Texture2DContent",5519,21589,0
+"C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/background.png","C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/bin/Windows/Content/background.xnb","TextureProcessor","Texture2DContent",42019,1280085,0,041052
+"C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/bruxa1.jpg","C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/bin/Windows/Content/bruxa1.xnb","TextureProcessor","Texture2DContent",5802,34357,0
+"C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/run002.png","C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/bin/Windows/Content/run002.xnb","TextureProcessor","Texture2DContent",5747,36949,0
+"C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/run003.png","C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/bin/Windows/Content/run003.xnb","TextureProcessor","Texture2DContent",5109,36949,0
+"C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/run004.png","C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/bin/Windows/Content/run004.xnb","TextureProcessor","Texture2DContent",5527,36949,0
+"C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/run006.png","C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/bin/Windows/Content/run006.xnb","TextureProcessor","Texture2DContent",5358,36949,0
+"C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/run007.png","C:/Users/Adélia/Desktop/CSHARP/SevenDays/Game1/Game1/Content/bin/Windows/Content/run007.xnb","TextureProcessor","Texture2DContent",5009,36949,0

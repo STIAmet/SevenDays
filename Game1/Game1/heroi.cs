@@ -11,7 +11,7 @@ using Mono.Helper;
 
 namespace Game1
 {
-    class heroi: AnimacaoSprite
+    public class heroi: AnimacaoSprite
     {
         private SpriteFont font;
         private int score = 0;
@@ -20,7 +20,7 @@ namespace Game1
         public string nome;
         public int vida;
         public Stack<Elemento> mochila = new Stack<Elemento>();
-        public List<Elemento> cinto = new List<Elemento>();
+        public Cinto cinto ;
 
         public int xFixoCenario;
 

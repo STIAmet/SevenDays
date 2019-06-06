@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Game1
 {
-    class BaseElementoX
+    public class BaseElementoX
     {
         public int xBase;
         public int yBase;
@@ -17,8 +17,9 @@ namespace Game1
         public int yTamanho;
         public Texture2D textura;
         public Color cor;
-
-        public BaseElementoX(int xBasinha, int yBasinha, int xTamainho, int yTamainho, Texture2D text, Color corzinha)
+        public bool IsVisible;
+        
+        public BaseElementoX(int xBasinha, int yBasinha, int xTamainho, int yTamainho, Texture2D text, Color corzinha, bool visible= true)
         {
             xBase = xBasinha;
             yBase = yBasinha;
@@ -26,6 +27,7 @@ namespace Game1
             yTamanho = yTamainho;
             textura = text;
             cor = corzinha;
+            IsVisible = visible;
         }
 
         public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime,heroi personagem)
@@ -57,6 +59,7 @@ namespace Game1
                 xBase = -xTamanho;
             }
             spriteBatch.Draw(textura, new Rectangle(xBase, yBase, xTamanho, yTamanho), cor);
+
         }
     }
 }

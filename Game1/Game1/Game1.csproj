@@ -48,6 +48,7 @@
     <Compile Include="Animation.cs" />
     <Compile Include="BaseElementoX.cs" />
     <Compile Include="Cenario.cs" />
+    <Compile Include="Cinto.cs" />
     <Compile Include="Elemento.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Game1.cs" />

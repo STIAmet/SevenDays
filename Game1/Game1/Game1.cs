@@ -29,7 +29,7 @@ namespace Game1
 
         heroi _personagem = new heroi();
 
-        BaseElementoX cenoura,cenoura2,cenoura3;
+        public List<BaseElementoX> listTree = new List<BaseElementoX>();
 
         public Game1()
         {
@@ -43,29 +43,49 @@ namespace Game1
             music = Content.Load<Song>("GOTTA BE YOU");
             MediaPlayer.Play(music);
 
-            graphics.PreferredBackBufferHeight = 950;
-            graphics.PreferredBackBufferWidth = 1700;
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 1200;
             graphics.ApplyChanges();
 
             base.Initialize();
         }
-        
+
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             Services.AddService(typeof(SpriteBatch), spriteBatch);
-            
+
             font = Content.Load<SpriteFont>("score");
-            elemento = new Elemento(this);
-            elemento.Position = new Vector2(300, 300);
-            elemento.escala =0.5f;
 
             _personagem.xFixoCenario = Window.ClientBounds.Width;
-            cenario = new Cenario(0, 0, Content.Load<Texture2D>("background"), Color.White, Window.ClientBounds.Width, Window.ClientBounds.Height);
 
-            cenoura = new BaseElementoX(700, 570, 200, 200, Content.Load<Texture2D>("idle001"), Color.White);
-            cenoura2 = new BaseElementoX(100, 570, 200, 200, Content.Load<Texture2D>("arma"), Color.White);
-            cenoura3 = new BaseElementoX(800, 570, 200, 200, Content.Load<Texture2D>("espada"), Color.White);
+            // INSTANCIAMENTO DO CINTO
+            _personagem.cinto = new Cinto(400, 25, 400, 25, Content.Load<Texture2D>("cenoura"), Color.White);
+
+            cenario = new Cenario(0, 0, Content.Load<Texture2D>("background"), Color.White, Window.ClientBounds.Width, Window.ClientBounds.Height);
+            listTree.AddRange(
+             new List<BaseElementoX>()
+             {
+              new BaseElementoX(50, 200, 200, 300, Content.Load<Texture2D>("Tree3"), Color.White),
+              new BaseElementoX(250, 200, 200, 300, Content.Load<Texture2D>("Tree2"), Color.White),
+              new BaseElementoX(450, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
+              new BaseElementoX(650, 300, 200, 200, Content.Load<Texture2D>("Tree3"), Color.White),
+              new BaseElementoX(850, 200, 200, 300, Content.Load<Texture2D>("Tree"), Color.White),
+              new BaseElementoX(1050, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
+              new BaseElementoX(1250, 200, 200, 300, Content.Load<Texture2D>("Tree3"), Color.White),
+              new BaseElementoX(1450, 200, 200, 300, Content.Load<Texture2D>("Tree2"), Color.White),
+              new BaseElementoX(150, 300, 200, 200, Content.Load<Texture2D>("Tree3"), Color.White),
+              new BaseElementoX(350, 200, 200, 300, Content.Load<Texture2D>("Tree2"), Color.White),
+              new BaseElementoX(550, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
+              new BaseElementoX(750, 200, 200, 300, Content.Load<Texture2D>("Tree3"), Color.White),
+              new BaseElementoX(950, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
+              new BaseElementoX(1150, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
+              new BaseElementoX(1350, 200, 200, 300, Content.Load<Texture2D>("Tree3"), Color.White),
+              new BaseElementoX(1550, 300, 200, 200, Content.Load<Texture2D>("Tree2"), Color.White)
+             }
+             );
+
+            elemento = new Elemento(500, 500, 100, 100, Content.Load<Texture2D>("poção"), Color.White);
 
             _personagem.LoadContent(Content, "character");
         }
@@ -80,7 +100,7 @@ namespace Game1
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            elemento.Update(gameTime);
+            //elemento.Update(gameTime);
 
             _personagem.Mover(ref gameTime);
 
@@ -95,23 +115,26 @@ namespace Game1
 
             cenario.Draw(spriteBatch, gameTime);
 
-            if ((((elemento.Position.X-elemento.Texture.Width) <= _personagem.Posicao.X) && ((elemento.Position.X + elemento.Texture.Width) >= _personagem.Posicao.X)) && (((elemento.Position.Y) >= _personagem.Posicao.Y) && (((elemento.Position.Y) ) <= (_personagem.Posicao.Y + elemento.Texture.Height))))
+            foreach (BaseElementoX var in listTree)
             {
-                //spriteBatch.Begin();
-                spriteBatch.DrawString(font, "Achou o bagulho porra", new Vector2(0, 200), Color.Black);
-                //spriteBatch.End();
+                var.Draw(spriteBatch,gameTime,_personagem);
             }
 
-            cenoura.Draw(spriteBatch, gameTime,_personagem);
-            cenoura2.Draw(spriteBatch, gameTime, _personagem);
-            cenoura3.Draw(spriteBatch, gameTime, _personagem);
+            //if ((((elemento.Position.X-elemento.Texture.Width) <= _personagem.Posicao.X) && ((elemento.Position.X + elemento.Texture.Width) >= _personagem.Posicao.X)) && (((elemento.Position.Y) >= _personagem.Posicao.Y) && (((elemento.Position.Y) ) <= (_personagem.Posicao.Y + elemento.Texture.Height))))
+            //{
+            //    //spriteBatch.Begin();
+            //    spriteBatch.DrawString(font, "Achou o bagulho porra", new Vector2(0, 200), Color.Black);
+            //    //spriteBatch.End();
+            //}
 
+
+            _personagem.cinto.Draw(spriteBatch, gameTime,_personagem);
             _personagem.Draw(ref spriteBatch);
 
             //spriteBatch.Draw(Content.Load<Texture2D>("espada"), new Vector2(500, 0), null, Color.White, 0f, Vector2.Zero, 0.5f, SpriteEffects.None,0);
                 
 
-            elemento.Draw(spriteBatch, gameTime);
+            elemento.Draw(spriteBatch, gameTime, _personagem);
             spriteBatch.End();
             
             base.Draw(gameTime);
