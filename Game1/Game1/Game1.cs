@@ -61,31 +61,32 @@ namespace Game1
 
             // INSTANCIAMENTO DO CINTO
             _personagem.cinto = new Cinto(400, 25, 400, 25, Content.Load<Texture2D>("cenoura"), Color.White);
+            _personagem.mochila = new Mochila((Window.ClientBounds.Width-100), 25, 50, 25, Content.Load<Texture2D>("cenoura"), Color.White);
 
             cenario = new Cenario(0, 0, Content.Load<Texture2D>("background"), Color.White, Window.ClientBounds.Width, Window.ClientBounds.Height);
             listTree.AddRange(
              new List<BaseElementoX>()
              {
-              new BaseElementoX(50, 200, 200, 300, Content.Load<Texture2D>("Tree3"), Color.White),
-              new BaseElementoX(250, 200, 200, 300, Content.Load<Texture2D>("Tree2"), Color.White),
-              new BaseElementoX(450, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
-              new BaseElementoX(650, 300, 200, 200, Content.Load<Texture2D>("Tree3"), Color.White),
-              new BaseElementoX(850, 200, 200, 300, Content.Load<Texture2D>("Tree"), Color.White),
-              new BaseElementoX(1050, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
-              new BaseElementoX(1250, 200, 200, 300, Content.Load<Texture2D>("Tree3"), Color.White),
-              new BaseElementoX(1450, 200, 200, 300, Content.Load<Texture2D>("Tree2"), Color.White),
-              new BaseElementoX(150, 300, 200, 200, Content.Load<Texture2D>("Tree3"), Color.White),
-              new BaseElementoX(350, 200, 200, 300, Content.Load<Texture2D>("Tree2"), Color.White),
-              new BaseElementoX(550, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
-              new BaseElementoX(750, 200, 200, 300, Content.Load<Texture2D>("Tree3"), Color.White),
-              new BaseElementoX(950, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
-              new BaseElementoX(1150, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
-              new BaseElementoX(1350, 200, 200, 300, Content.Load<Texture2D>("Tree3"), Color.White),
-              new BaseElementoX(1550, 300, 200, 200, Content.Load<Texture2D>("Tree2"), Color.White)
+                  new BaseElementoX(50, 200, 200, 300, Content.Load<Texture2D>("Tree3"), Color.White),
+                  new BaseElementoX(250, 200, 200, 300, Content.Load<Texture2D>("Tree2"), Color.White),
+                  new BaseElementoX(450, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
+                  new BaseElementoX(650, 300, 200, 200, Content.Load<Texture2D>("Tree3"), Color.White),
+                  new BaseElementoX(850, 200, 200, 300, Content.Load<Texture2D>("Tree"), Color.White),
+                  new BaseElementoX(1050, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
+                  new BaseElementoX(1250, 200, 200, 300, Content.Load<Texture2D>("Tree3"), Color.White),
+                  new BaseElementoX(1450, 200, 200, 300, Content.Load<Texture2D>("Tree2"), Color.White),
+                  new BaseElementoX(150, 300, 200, 200, Content.Load<Texture2D>("Tree3"), Color.White),
+                  new BaseElementoX(350, 200, 200, 300, Content.Load<Texture2D>("Tree2"), Color.White),
+                  new BaseElementoX(550, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
+                  new BaseElementoX(750, 200, 200, 300, Content.Load<Texture2D>("Tree3"), Color.White),
+                  new BaseElementoX(950, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
+                  new BaseElementoX(1150, 300, 200, 200, Content.Load<Texture2D>("Tree"), Color.White),
+                  new BaseElementoX(1350, 200, 200, 300, Content.Load<Texture2D>("Tree3"), Color.White),
+                  new BaseElementoX(1550, 300, 200, 200, Content.Load<Texture2D>("Tree2"), Color.White)
              }
              );
 
-            elemento = new Elemento(500, 500, 100, 100, Content.Load<Texture2D>("poção"), Color.White);
+            elemento = new Elemento("pocao",500, 500, 100, 100, Content.Load<Texture2D>("poção"), Color.White);
 
             _personagem.LoadContent(Content, "character");
         }
@@ -129,6 +130,7 @@ namespace Game1
 
 
             _personagem.cinto.Draw(spriteBatch, gameTime,_personagem);
+            _personagem.mochila.Draw(spriteBatch, gameTime, _personagem);
             _personagem.Draw(ref spriteBatch);
 
             //spriteBatch.Draw(Content.Load<Texture2D>("espada"), new Vector2(500, 0), null, Color.White, 0f, Vector2.Zero, 0.5f, SpriteEffects.None,0);

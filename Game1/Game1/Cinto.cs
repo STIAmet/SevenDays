@@ -48,8 +48,7 @@ namespace Game1
             {
                 return "Cinto cheio";
             }
-            int i;
-            for(i = 0; i<maxElementos;i++)
+            for(int i = 0; i<maxElementos;i++)
             {
                 if(posicaoCinto[i] == false)
                 {
@@ -67,9 +66,13 @@ namespace Game1
             return elementos;
         }
 
-        public void Remover(int posicao)
+        public void Remover(int posicao, string nome)
         {
-            elementos.RemoveAt(posicao);
+            if (posicaoCinto[posicao] == true && elementos[posicao].nome==nome)
+            {
+                elementos.RemoveAt(posicao);
+                posicaoCinto[posicao] = false;
+            }
         }
 
         public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime, heroi personagem)

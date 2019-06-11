@@ -19,7 +19,7 @@ namespace Game1
         private int i = 0;
         public string nome;
         public int vida;
-        public Stack<Elemento> mochila = new Stack<Elemento>();
+        public Mochila mochila;
         public Cinto cinto ;
 
         public int xFixoCenario;
