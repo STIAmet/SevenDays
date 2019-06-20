@@ -30,7 +30,7 @@ namespace Game1
         //    font = game.Content.Load<SpriteFont>("score");
 
         //}
-        public Elemento(string nome,int xBasinha, int yBasinha, int xTamainho, int yTamainho, Texture2D text, Color corzinha, bool visible = true)
+        public Elemento(string nomezinho,int xBasinha, int yBasinha, int xTamainho, int yTamainho, Texture2D text, Color corzinha, bool visible = true)
         {
             xBase = xBasinha;
             yBase = yBasinha;
@@ -39,6 +39,7 @@ namespace Game1
             textura = text;
             cor = corzinha;
             IsVisible = visible;
+            nome = nomezinho;
         }
 
 
@@ -51,10 +52,14 @@ namespace Game1
                 {
                     if ((new Rectangle(personagem.cinto.xBase + (i * 75), personagem.cinto.yBase, 50, 50).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Mouse.GetState().MiddleButton == ButtonState.Pressed))
                     {
-                        xBase = new Random().Next(Convert.ToInt32(personagem.Posicao.X-100), Convert.ToInt32(personagem.Posicao.X+100));
-                        yBase = Convert.ToInt32((personagem.Posicao.Y+100)-this.yTamanho);
-                        IsVisible = true;
-                        personagem.cinto.Remover(i, this.nome);
+                        if (personagem.cinto.Remover(i, this.nome))
+                        {
+                            var t = this;
+                            xBase = new Random().Next(Convert.ToInt32(personagem.Posicao.X - 100), Convert.ToInt32(personagem.Posicao.X + 100));
+                            yBase = Convert.ToInt32((personagem.Posicao.Y + 100) - this.yTamanho);
+                            IsVisible = true;
+                        }
+                        
 
                     }
                 }
@@ -65,13 +70,24 @@ namespace Game1
                 {
                     if ((new Rectangle(personagem.mochila.xBase, personagem.mochila.yBase, 50, 50).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Mouse.GetState().MiddleButton == ButtonState.Pressed))
                     {
-                        xBase = new Random().Next(Convert.ToInt32(personagem.Posicao.X - 100), Convert.ToInt32(personagem.Posicao.X + 100));
-                        yBase = Convert.ToInt32((personagem.Posicao.Y + 100) - this.yTamanho);
-                        IsVisible = true;
-                        personagem.mochila.Remover(this.nome);
+                        if (personagem.mochila.click == false)// Isso serve apenas para evitar que quando o usuario clique, seja contado varios cliques.(Sem isso, a mochila inteira seria dropada)
+                        {
+                            if (personagem.mochila.Remover(this.nome))
+                            {
+                                personagem.mochila.click = true;
+                                xBase = new Random().Next(Convert.ToInt32(personagem.Posicao.X - 100), Convert.ToInt32(personagem.Posicao.X + 100));
+                                yBase = Convert.ToInt32((personagem.Posicao.Y + 100) - this.yTamanho);
+                                IsVisible = true;
+                                personagem.mochila.Remover(this.nome);
+                            }
+                        }
 
                     }
                 }
+            }
+            if (Mouse.GetState().MiddleButton == ButtonState.Released)
+            {
+                personagem.mochila.click = false;
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Right))
