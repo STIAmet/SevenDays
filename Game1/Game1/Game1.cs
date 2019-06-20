@@ -30,6 +30,7 @@ namespace Game1
         Song music;
 
         heroi _personagem = new heroi();
+        Inimigo inimigo = new Inimigo();
 
         public List<BaseElementoX> listTree = new List<BaseElementoX>();
 
@@ -132,6 +133,7 @@ namespace Game1
             
 
             _personagem.LoadContent(Content, "character");
+            inimigo.LoadContent(Content, "zumbie2");
         }
         
         protected override void UnloadContent()
@@ -153,6 +155,8 @@ namespace Game1
                 key.Update(gameTime,_personagem);
             }
             
+
+            inimigo.Mover(ref gameTime);
 
             base.Update(gameTime);
         }
@@ -181,6 +185,7 @@ namespace Game1
             _personagem.cinto.Draw(spriteBatch, gameTime,_personagem);
             _personagem.mochila.Draw(spriteBatch, gameTime, _personagem);
             _personagem.Draw(ref spriteBatch);
+            inimigo.Draw(ref spriteBatch);
 
             //TUTORIAL
             
