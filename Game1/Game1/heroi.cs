@@ -20,7 +20,8 @@ namespace Game1
         public string nome;
         public int vida;
         public Mochila mochila;
-        public Cinto cinto ;
+        public Cinto cinto;
+        public BarraVida barraVida;
 
         public int xFixoCenario;
 

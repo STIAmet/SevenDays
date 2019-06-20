@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="AnimacaoSprite.cs" />
     <Compile Include="Animation.cs" />
+    <Compile Include="BarraVida.cs" />
     <Compile Include="BaseElementoX.cs" />
     <Compile Include="Cenario.cs" />
     <Compile Include="Cinto.cs" />

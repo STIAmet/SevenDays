@@ -59,6 +59,9 @@ namespace Game1
 
             _personagem.xFixoCenario = Window.ClientBounds.Width;
 
+            //BARRA DE VIDA
+            _personagem.barraVida = new BarraVida(0,0, 50, 25, 100, 25, Content.Load<Texture2D>("Vida"), Content.Load<Texture2D>("Barra_vida"),Content.Load<Texture2D>("fundo_barra"), Color.White, 3, Content.Load<Texture2D>("qtd_vida"));
+
             // INSTANCIAMENTO DO CINTO
             _personagem.cinto = new Cinto(400, 25, 400, 25, Content.Load<Texture2D>("cenoura"), Color.White);
             _personagem.mochila = new Mochila((Window.ClientBounds.Width-100), 25, 50, 25, Content.Load<Texture2D>("cenoura"), Color.White);
@@ -110,36 +113,39 @@ namespace Game1
         
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            spriteBatch.Begin();
-
-            cenario.Draw(spriteBatch, gameTime);
-
-            foreach (BaseElementoX var in listTree)
-            {
-                var.Draw(spriteBatch,gameTime,_personagem);
-            }
-
-            //if ((((elemento.Position.X-elemento.Texture.Width) <= _personagem.Posicao.X) && ((elemento.Position.X + elemento.Texture.Width) >= _personagem.Posicao.X)) && (((elemento.Position.Y) >= _personagem.Posicao.Y) && (((elemento.Position.Y) ) <= (_personagem.Posicao.Y + elemento.Texture.Height))))
+            //if (_personagem.barraVida.GameOver() != -1)
             //{
-            //    //spriteBatch.Begin();
-            //    spriteBatch.DrawString(font, "Achou o bagulho porra", new Vector2(0, 200), Color.Black);
-            //    //spriteBatch.End();
+                GraphicsDevice.Clear(Color.CornflowerBlue);
+
+                spriteBatch.Begin();
+
+                cenario.Draw(spriteBatch, gameTime);
+
+                foreach (BaseElementoX var in listTree)
+                {
+                    var.Draw(spriteBatch, gameTime, _personagem);
+                }
+
+                _personagem.cinto.Draw(spriteBatch, gameTime, _personagem);
+                _personagem.mochila.Draw(spriteBatch, gameTime, _personagem);
+                _personagem.barraVida.Draw(spriteBatch, gameTime, _personagem);
+                _personagem.Draw(ref spriteBatch);
+
+                elemento.Draw(spriteBatch, gameTime, _personagem);
+                spriteBatch.End();
+
+                base.Draw(gameTime);
             //}
 
+            //else if (_personagem.barraVida.qtdVida != 0)
+            //{
+            //    _personagem.barraVida.qtdVida = -1; //reinicia da fase
+            //}
 
-            _personagem.cinto.Draw(spriteBatch, gameTime,_personagem);
-            _personagem.mochila.Draw(spriteBatch, gameTime, _personagem);
-            _personagem.Draw(ref spriteBatch);
-
-            //spriteBatch.Draw(Content.Load<Texture2D>("espada"), new Vector2(500, 0), null, Color.White, 0f, Vector2.Zero, 0.5f, SpriteEffects.None,0);
-                
-
-            elemento.Draw(spriteBatch, gameTime, _personagem);
-            spriteBatch.End();
-            
-            base.Draw(gameTime);
+            //else
+            //{
+            //    spriteBatch.Draw(Content.Load<Texture2D>("GameOver"), new Rectangle(0,0, 50, 50), Color.White); //reinicia o jogo todo
+            //}
         }
     }
 }
