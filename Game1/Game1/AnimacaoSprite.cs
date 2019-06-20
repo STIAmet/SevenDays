@@ -8,7 +8,7 @@ namespace Game1
     public abstract class AnimacaoSprite
     {
         public bool Ativado = false;
-        public Vector2 Posicao = new Vector2(0, 400);
+        public Vector2 Posicao = new Vector2(0, 450);
 
         protected abstract int TotalLinhasNaSprite { get; }
         protected abstract int TotalColunasNaSprite { get; }

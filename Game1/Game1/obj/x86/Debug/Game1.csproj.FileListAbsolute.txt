@@ -174,3 +174,16 @@ C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\obj\x86\Debug\Game1.pdb
 C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\Tree.xnb
 C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\Tree2.xnb
 C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\Tree3.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\back1.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\casa2.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\casa3.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\casa4.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\casa5.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\Shawn.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\balao.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\Balawn.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\mochila.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\buraco.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\cinto.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\cinto1.xnb
+C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\cinto2.xnb

@@ -31,15 +31,16 @@ namespace Game1
         }
 
         public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime,heroi personagem)
-        {
-            if(Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Right))
-                {
+        { 
+            if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Right))
+            {
                 // Direita
                 if (Keyboard.GetState().IsKeyDown(Keys.Right))
                 {
                     if (personagem.Posicao.X >= (0.7 * personagem.xFixoCenario))
                     {
                         xBase -= (int)(personagem.Velocidade.X * (gameTime.ElapsedGameTime.TotalSeconds));
+
                     }
                 }
                 else
@@ -50,16 +51,16 @@ namespace Game1
                     }
                 }
             }
-            if(xBase <= xTamanho*-1)
+            if (xBase <= xTamanho * -1)
             {
                 xBase = personagem.xFixoCenario + xTamanho;
             }
-            else if(xBase >= xTamanho + personagem.xFixoCenario)
+            else if (xBase >= xTamanho + personagem.xFixoCenario)
             {
                 xBase = -xTamanho;
             }
             spriteBatch.Draw(textura, new Rectangle(xBase, yBase, xTamanho, yTamanho), cor);
-
+            
         }
     }
 }

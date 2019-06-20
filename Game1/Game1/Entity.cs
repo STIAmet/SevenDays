@@ -49,7 +49,7 @@ namespace Game1
 
         public virtual void Update(GameTime gameTime)
         {
-            Keyboard.Update(gameTime);
+            //Keyboard.Update(gameTime);
         }
 
         public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime)

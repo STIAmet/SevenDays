@@ -17,10 +17,12 @@ namespace Game1
         private int score = 0;
         public float caixas;
         private int i = 0;
-        public string nome;
+        public string nome = "";
         public int vida;
         public Mochila mochila;
         public Cinto cinto ;
+        public float distance = 0;
+
 
         public int xFixoCenario;
 
@@ -44,7 +46,9 @@ namespace Game1
                     {
                         Animacao(ref gameTime, 0);
 
-                        if(Posicao.X <= (0.7 * xFixoCenario))
+                        distance += (float)(Velocidade.X * tempoDecorridoJogo);
+
+                        if (Posicao.X <= (0.7 * xFixoCenario))
                         {
                             Posicao.X += (float)(Velocidade.X * tempoDecorridoJogo);
                         }
@@ -55,9 +59,11 @@ namespace Game1
                     {
                         Animacao(ref gameTime, 135);
 
+                        distance -= (float)(Velocidade.X * tempoDecorridoJogo);
+
                         if (Posicao.X >= (0.1 * xFixoCenario))
                         {
-                            Posicao.X -= (float)(Velocidade.X * tempoDecorridoJogo);
+                             Posicao.X -= (float)(Velocidade.X * tempoDecorridoJogo);
                         }
 
                     }
