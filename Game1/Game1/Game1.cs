@@ -21,7 +21,7 @@ namespace Game1
 
         Cenario cenario;
 
-        Elemento elemento;
+        Elemento elemento, elemento2;
 
         private SpriteFont font;
 
@@ -87,6 +87,7 @@ namespace Game1
              );
 
             elemento = new Elemento("pocao",500, 500, 100, 100, Content.Load<Texture2D>("poção"), Color.White);
+            elemento2 = new Elemento("espada", 800, 500, 100, 100, Content.Load<Texture2D>("espada"), Color.White);
 
             _personagem.LoadContent(Content, "character");
         }
@@ -137,6 +138,8 @@ namespace Game1
                 
 
             elemento.Draw(spriteBatch, gameTime, _personagem);
+            elemento2.Draw(spriteBatch, gameTime, _personagem);
+
             spriteBatch.End();
             
             base.Draw(gameTime);
