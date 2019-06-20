@@ -28,6 +28,7 @@ namespace Game1
         Song music;
 
         heroi _personagem = new heroi();
+        Inimigo inimigo = new Inimigo();
 
         public List<BaseElementoX> listTree = new List<BaseElementoX>();
 
@@ -41,7 +42,7 @@ namespace Game1
         protected override void Initialize()
         {
             music = Content.Load<Song>("GOTTA BE YOU");
-            MediaPlayer.Play(music);
+            //MediaPlayer.Play(music);
 
             graphics.PreferredBackBufferHeight = 600;
             graphics.PreferredBackBufferWidth = 1200;
@@ -90,6 +91,7 @@ namespace Game1
             elemento2 = new Elemento("espada", 800, 500, 100, 100, Content.Load<Texture2D>("espada"), Color.White);
 
             _personagem.LoadContent(Content, "character");
+            inimigo.LoadContent(Content, "zumbie2");
         }
         
         protected override void UnloadContent()
@@ -105,6 +107,7 @@ namespace Game1
             //elemento.Update(gameTime);
 
             _personagem.Mover(ref gameTime);
+            inimigo.Mover(ref gameTime);
 
             base.Update(gameTime);
         }
@@ -133,6 +136,7 @@ namespace Game1
             _personagem.cinto.Draw(spriteBatch, gameTime,_personagem);
             _personagem.mochila.Draw(spriteBatch, gameTime, _personagem);
             _personagem.Draw(ref spriteBatch);
+            inimigo.Draw(ref spriteBatch);
 
             //spriteBatch.Draw(Content.Load<Texture2D>("espada"), new Vector2(500, 0), null, Color.White, 0f, Vector2.Zero, 0.5f, SpriteEffects.None,0);
                 

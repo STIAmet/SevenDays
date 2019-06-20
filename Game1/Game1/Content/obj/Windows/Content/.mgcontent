@@ -31,9 +31,13 @@
     <File>C:/Users/Kevin/Desktop/RPG- FINAL/SevenDays/Game1/Game1/Content/Tree.png</File>
     <File>C:/Users/Kevin/Desktop/RPG- FINAL/SevenDays/Game1/Game1/Content/Tree2.png</File>
     <File>C:/Users/Kevin/Desktop/RPG- FINAL/SevenDays/Game1/Game1/Content/Tree3.png</File>
+    <File>C:/Users/Kevin/Desktop/RPG- FINAL/SevenDays/Game1/Game1/Content/zumbie.jpg</File>
+    <File>C:/Users/Kevin/Desktop/RPG- FINAL/SevenDays/Game1/Game1/Content/zumbie2.png</File>
   </SourceFiles>
   <DestFiles>
     <File>Background.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -24,8 +24,8 @@ namespace Game1
 
         public int xFixoCenario;
 
-        protected override int TotalLinhasNaSprite => 2;
-        protected override int TotalColunasNaSprite => 8;
+        public override int TotalLinhasNaSprite => 2;
+        public override int TotalColunasNaSprite => 8;
 
         public Vector2 Velocidade = new Vector2(300f);
         

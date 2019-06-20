@@ -53,6 +53,7 @@
     <Compile Include="Entity.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="heroi.cs" />
+    <Compile Include="Inimigo.cs" />
     <Compile Include="KeyboardHelper.cs" />
     <Compile Include="Loader.cs" />
     <Compile Include="Mochila.cs" />
