@@ -174,3 +174,54 @@ C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\obj\x86\Debug\Game1.pdb
 C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\Tree.xnb
 C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\Tree2.xnb
 C:\Users\Adélia\Desktop\CSHARP\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\Tree3.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\GOTTA BE YOU.wma
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\GOTTA BE YOU.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\arma.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\back.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\Background.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\bruxa1.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\cenoura.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\character.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\espada.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\forest-game-background-2d.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\idle001.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\idle002.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\idle003.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\idle004.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\personagem.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\poção.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\run001.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\run002.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\run003.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\run004.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\run005.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\run006.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\run007.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\run008.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\score.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\Tree.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\Tree2.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\Tree3.xnb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Game1.exe
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Game1.pdb
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\obj\x86\Debug\Game1.csprojAssemblyReference.cache
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\obj\x86\Debug\Game1.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\obj\x86\Debug\Game1.csproj.CopyComplete
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\obj\x86\Debug\Game1.exe
+C:\Users\Kevin\Desktop\RPG- FINAL\SevenDays\Game1\Game1\obj\x86\Debug\Game1.pdb
