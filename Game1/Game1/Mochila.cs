@@ -18,6 +18,7 @@ namespace Game1
         public Color cor;
         public bool IsVisible;
         public Stack<Elemento> elementos;
+        public bool click;
 
         public Mochila(int xBasinha, int yBasinha, int xTamainho, int yTamainho, Texture2D text, Color corzinha, bool visible = true)
         {
@@ -29,6 +30,7 @@ namespace Game1
             cor = corzinha;
             IsVisible = visible;
             elementos = new Stack<Elemento>();
+            click = false;
         }
 
         public void Add(Elemento Item)
@@ -36,11 +38,14 @@ namespace Game1
             elementos.Push(Item);
         }
 
-        public void Remover(string nome)
+        public bool Remover(string nome)
         {
 
-            if(elementos.Count!= 0 && elementos.Peek().nome==nome)
-                elementos.Pop();
+            if (elementos.Count != 0 && elementos.Peek().nome == nome && click == false)
+            { elementos.Pop();
+                return true;
+            }
+            return false;
         }
 
         public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime, heroi personagem)

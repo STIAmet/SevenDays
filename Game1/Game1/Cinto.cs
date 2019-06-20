@@ -33,7 +33,7 @@ namespace Game1
             textura = text;
             cor = corzinha;
             IsVisible = visible;
-            elementos = new List<Elemento>();
+            elementos = new List<Elemento>() {null, null, null, null, null };
             posicaoCinto = new List<bool>();
 
             for (i = 0; i < maxElementos; i++)
@@ -44,7 +44,7 @@ namespace Game1
 
         public string Add( Elemento Item)
         {
-            if (elementos.Count() == maxElementos)
+            if (elementos.Count(x=> x!= null) == maxElementos)
             {
                 return "Cinto cheio";
             }
@@ -52,8 +52,8 @@ namespace Game1
             {
                 if(posicaoCinto[i] == false)
                 {
-                    posicaoCinto[i] = true;
-                    elementos.Insert(i, Item);
+                    posicaoCinto[i] = true;           
+                    elementos[i] = Item;
                     break;
                 }
             }
@@ -66,13 +66,15 @@ namespace Game1
             return elementos;
         }
 
-        public void Remover(int posicao, string nome)
+        public bool Remover(int posicao, string nome)
         {
             if (posicaoCinto[posicao] == true && elementos[posicao].nome==nome)
             {
-                elementos.RemoveAt(posicao);
+                elementos[posicao]=null;
                 posicaoCinto[posicao] = false;
+                return true;
             }
+            return false;
         }
 
         public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime, heroi personagem)
