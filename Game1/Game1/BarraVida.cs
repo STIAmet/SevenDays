@@ -43,12 +43,12 @@ namespace Game1
         public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime, heroi personagem)
         {
             spriteBatch.Draw(texturaFundo, new Rectangle(xBase+20, yBase+15, 135, 40), Color.White);
-            spriteBatch.Draw(texturaVida, new Rectangle(xBase+20, yBase+15, (int)(1.35f*vidaMax), 35), Color.White);
+            spriteBatch.Draw(texturaVida, new Rectangle(xBase+20, yBase+15, (int)(1.33f*vidaMax), 35), Color.White);
             spriteBatch.Draw(texturaBarra, new Rectangle(xBase, yBase, 200, 100), Color.White);
 
             for (int i=0; i<qtdVida; i++)
             {
-                spriteBatch.Draw(Vida, new Rectangle(xBase + (20 * i), yBase + 50, 20, 20), Color.White);
+                spriteBatch.Draw(Vida, new Rectangle(xBase + (25 * i), yBase + 60, 20, 20), Color.White);
             }
 
         }

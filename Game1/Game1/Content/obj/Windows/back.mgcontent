@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/back.png</SourceFile>
-  <SourceTime>2019-06-03T17:16:00.2482583-03:00</SourceTime>
-  <DestFile>C:/Users/yasmi/Documents/Engenharia da Computação/monogame/Game1/Game1/Content/bin/Windows/back.xnb</DestFile>
-  <DestTime>2019-06-03T17:16:40.036735-03:00</DestTime>
+  <SourceFile>C:/Users/Kevin/Desktop/RPG- FINAL/SevenDays/Game1/Game1/Content/back.png</SourceFile>
+  <SourceTime>2019-06-19T22:45:21.9748883-03:00</SourceTime>
+  <DestFile>C:/Users/Kevin/Desktop/RPG- FINAL/SevenDays/Game1/Game1/Content/bin/Windows/back.xnb</DestFile>
+  <DestTime>2019-06-20T12:20:12.5739611-03:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2019-05-28T14:47:12-03:00</ImporterTime>
+  <ImporterTime>2018-12-08T14:35:54-02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2019-05-28T14:47:12-03:00</ProcessorTime>
+  <ProcessorTime>2018-12-08T14:35:54-02:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

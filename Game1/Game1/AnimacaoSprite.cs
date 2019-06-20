@@ -8,17 +8,18 @@ namespace Game1
     public abstract class AnimacaoSprite
     {
         public bool Ativado = false;
-        public Vector2 Posicao = new Vector2(0, 400);
+        public Vector2 Posicao = new Vector2(0, 450);
 
-        protected abstract int TotalLinhasNaSprite { get; }
-        protected abstract int TotalColunasNaSprite { get; }
+        public abstract int TotalLinhasNaSprite { get; }
+        public abstract int TotalColunasNaSprite { get; }
 
-        private Texture2D _textura;
-        private int _frameLargura;
-        private int _frameAltura;
-        private Rectangle _regiaoDaTextura = Rectangle.Empty;
-        private int _frameAtualDaColuna;
-        private TimeSpan _acumulaTempo = TimeSpan.Zero;
+        public Texture2D _textura;
+        public int _frameLargura;
+        public int _frameAltura;
+        public Rectangle _regiaoDaTextura = Rectangle.Empty;
+        public int _frameAtualDaColuna;
+        public TimeSpan _acumulaTempo = TimeSpan.Zero;
+        public Color cor =Color.White;
 
         public void LoadContent(ContentManager content, string assetName)
         {
@@ -53,7 +54,7 @@ namespace Game1
 
         public void Draw(ref SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_textura, Posicao, _regiaoDaTextura, Color.White);
+            spriteBatch.Draw(_textura, Posicao, _regiaoDaTextura, cor);
         }
     }
 }
