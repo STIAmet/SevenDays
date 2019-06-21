@@ -12,7 +12,7 @@ namespace Game1
     {
         public Texture2D Vida;
         public int qtdVida = 3;
-        public int vidaAgora;
+        public int vidaAgora=100;
         public int vidaMax = 100;
         public int [] ataque = new int [3];
         public int[] pocao = new int[2];
@@ -43,7 +43,7 @@ namespace Game1
         public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime, heroi personagem)
         {
             spriteBatch.Draw(texturaFundo, new Rectangle(xBase+20, yBase+15, 135, 40), Color.White);
-            spriteBatch.Draw(texturaVida, new Rectangle(xBase+20, yBase+15, (int)(1.33f*vidaMax), 35), Color.White);
+            spriteBatch.Draw(texturaVida, new Rectangle(xBase+20, yBase+15, (int)(1.33f*vidaAgora), 35), Color.White);
             spriteBatch.Draw(texturaBarra, new Rectangle(xBase, yBase, 200, 100), Color.White);
 
             for (int i=0; i<qtdVida; i++)
@@ -61,7 +61,7 @@ namespace Game1
 
             vidaAgora += pocao[nivelPocao];
 
-            if (vidaAgora >= vidaMax)
+            if (vidaAgora >= 100)
                 vidaAgora = 100;
 
             return vidaAgora;

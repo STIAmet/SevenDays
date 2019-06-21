@@ -12,8 +12,8 @@ namespace Game1
         public bool tipo; //Arma ou poção
         public string nome;
         public int peso;
-        public int ataque; //arma
-        public int cura; //poção
+        public int ataque=0; //arma
+        public int cura=0; //poção
         private SpriteFont font;
         private int score = 0;
         public int xBase;
@@ -30,7 +30,7 @@ namespace Game1
         //    font = game.Content.Load<SpriteFont>("score");
 
         //}
-        public Elemento(string nomezinho,int xBasinha, int yBasinha, int xTamainho, int yTamainho, Texture2D text, Color corzinha, bool visible = true)
+        public Elemento(string nomezinho,int xBasinha, int yBasinha, int xTamainho, int yTamainho, Texture2D text, Color corzinha, int _cura, int _ataque, bool visible = true)
         {
             xBase = xBasinha;
             yBase = yBasinha;
@@ -40,12 +40,55 @@ namespace Game1
             cor = corzinha;
             IsVisible = visible;
             nome = nomezinho;
+            cura = _cura;
+            ataque = _ataque;
         }
 
 
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime, heroi personagem)
         {
-            //spriteBatch.Draw(Texture, new Vector2(0, 26), null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None,0);
+            #region USAR_ITENS
+            for (int i = 0; i < personagem.cinto.maxElementos; i++)
+            {
+                if (personagem.cinto.posicaoCinto[i] == true)
+                {
+                    if ((new Rectangle(personagem.cinto.xBase + (i * 75), personagem.cinto.yBase, 50, 50).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Keyboard.GetState().IsKeyDown(Keys.Space)))
+                    {
+
+                        if (personagem.cinto.elementos[i].ataque == 0)
+                        {
+                            personagem.barraVida.Pocao(cura);
+                        }
+                        else if(this.ataque>0) {
+                            //equipar espada TODO
+                        }
+                        return;
+
+                    }
+                }
+            }
+            if (personagem.mochila.elementos.Count != 0)
+            {
+                if (personagem.mochila.elementos.Peek().nome == this.nome)
+                {
+                    if ((new Rectangle(personagem.mochila.xBase, personagem.mochila.yBase, 50, 50).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Keyboard.GetState().IsKeyDown(Keys.Space)))
+                    {
+                        if (personagem.mochila.click == false)// Isso serve apenas para evitar que quando o usuario clique, seja contado varios cliques.(Sem isso, a mochila inteira seria dropada)
+                        {
+                            return;
+                        }
+
+                    }
+                }
+            }
+            if (Mouse.GetState().MiddleButton == ButtonState.Released)
+            {
+                personagem.mochila.click = false;
+            }
+            #endregion
+
+
+            #region Dropar_Itens
             for (int i = 0; i < personagem.cinto.maxElementos; i++)
             {
                 if (personagem.cinto.posicaoCinto[i] == true)
@@ -89,6 +132,8 @@ namespace Game1
             {
                 personagem.mochila.click = false;
             }
+            #endregion
+
 
             if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Right))
             {

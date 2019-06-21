@@ -30,7 +30,7 @@ namespace Game1
         Song music;
 
         heroi _personagem = new heroi();
-        Inimigo inimigo = new Inimigo();
+        Inimigo inimigo = new Inimigo(100, 500,420,2);
 
         public List<BaseElementoX> listTree = new List<BaseElementoX>();
 
@@ -67,7 +67,7 @@ namespace Game1
             _personagem.xFixoCenario = Window.ClientBounds.Width;
 
             //BARRA DE VIDA
-            _personagem.barraVida = new BarraVida(0,0, 50, 25, 100, 25, Content.Load<Texture2D>("Vida"), Content.Load<Texture2D>("Barra_vida"),Content.Load<Texture2D>("fundo_barra"), Color.White, 3, Content.Load<Texture2D>("qtd_vida"));
+            _personagem.barraVida = new BarraVida(100,0, 50, 25, 100, 25, Content.Load<Texture2D>("Vida"), Content.Load<Texture2D>("Barra_vida"),Content.Load<Texture2D>("fundo_barra"), Color.White, 3, Content.Load<Texture2D>("qtd_vida"));
 
             // INSTANCIAMENTO DO CINTO
             _personagem.cinto = new Cinto(600, 25, 400, 25, Content.Load<Texture2D>("buraco"), Color.White);
@@ -90,9 +90,9 @@ namespace Game1
                          }
                          );
 
-                        elemento = new Elemento("pocao", 1500, 500, 60, 60, Content.Load<Texture2D>("poção"), Color.White);
+                        elemento = new Elemento("pocao", 1500, 500, 60, 60, Content.Load<Texture2D>("poção"), Color.White, 0,0);
                         //elemento = new Elemento("pocao",500, 500, 100, 100, Content.Load<Texture2D>("poção"), Color.White);
-                        elemento2 = new Elemento("espada", 800, 500, 100, 100, Content.Load<Texture2D>("espada"), Color.White);
+                        elemento2 = new Elemento("espada", 800, 500, 100, 100, Content.Load<Texture2D>("espada"), Color.White, 0,30);
                         
 
                         break;
@@ -136,7 +136,7 @@ namespace Game1
             
 
             _personagem.LoadContent(Content, "character");
-            inimigo.LoadContent(Content, "zumbie2");
+            inimigo.LoadContent(Content, "zumbie1");
         }
         
         protected override void UnloadContent()
@@ -159,7 +159,7 @@ namespace Game1
             }
             
 
-            inimigo.Mover(ref gameTime);
+            inimigo.Mover(ref gameTime, _personagem);
 
             base.Update(gameTime);
         }

@@ -31,14 +31,14 @@ namespace Game1
             _regiaoDaTextura = new Rectangle(0, 0, _frameLargura, _frameAltura);
         }
 
-        public void Animacao(ref GameTime gameTime, int regiaoPosY)
+        public void Animacao(ref GameTime gameTime, int regiaoPosY, int ms=100)
         {
             if (!Ativado)
                 return;
 
             _acumulaTempo += gameTime.ElapsedGameTime;
 
-            if (_acumulaTempo >= TimeSpan.FromMilliseconds(100))
+            if (_acumulaTempo >= TimeSpan.FromMilliseconds(ms))
             {
                 _frameAtualDaColuna++;
 

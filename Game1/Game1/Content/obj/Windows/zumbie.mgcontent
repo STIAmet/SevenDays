@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Kevin/Desktop/RPG- FINAL/SevenDays/Game1/Game1/Content/zumbie.jpg</SourceFile>
-  <SourceTime>2019-06-20T12:19:00.5708428-03:00</SourceTime>
-  <DestFile>C:/Users/Kevin/Desktop/RPG- FINAL/SevenDays/Game1/Game1/Content/bin/Windows/zumbie.xnb</DestFile>
-  <DestTime>2019-06-20T12:20:13.709026-03:00</DestTime>
+  <SourceFile>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/zumbie.jpg</SourceFile>
+  <SourceTime>2019-06-20T21:52:27.7694197-03:00</SourceTime>
+  <DestFile>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/bin/Windows/zumbie.xnb</DestFile>
+  <DestTime>2019-06-20T22:17:46.5797588-03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T14:35:54-02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
