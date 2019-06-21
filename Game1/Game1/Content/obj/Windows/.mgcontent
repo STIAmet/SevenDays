@@ -25,6 +25,8 @@
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/cinto1.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/cinto2.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/espada.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/EspadaComum.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/espadaCruzada.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/forest-game-background-2d.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/fundo_barra.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/GameOver.gif</File>
@@ -56,6 +58,8 @@
   <DestFiles>
     <File>zumbie1.png</File>
     <File>Background.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -22,7 +22,9 @@ namespace Game1
         public Mochila mochila;
         public BarraVida barraVida;
         public Cinto cinto ;
+        public ArmaEquipada armaEquipada;
         public float distance = 0;
+        public int ataque = 10;
 
 
         public int xFixoCenario;

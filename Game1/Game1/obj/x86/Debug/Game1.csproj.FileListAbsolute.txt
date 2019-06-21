@@ -368,3 +368,5 @@ C:\Users\kevin\Desktop\RPG\SevenDays\Game1\Game1\obj\x86\Debug\Game1.csproj.Core
 C:\Users\kevin\Desktop\RPG\SevenDays\Game1\Game1\obj\x86\Debug\Game1.csproj.CopyComplete
 C:\Users\kevin\Desktop\RPG\SevenDays\Game1\Game1\obj\x86\Debug\Game1.exe
 C:\Users\kevin\Desktop\RPG\SevenDays\Game1\Game1\obj\x86\Debug\Game1.pdb
+C:\Users\kevin\Desktop\RPG\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\espadaCruzada.xnb
+C:\Users\kevin\Desktop\RPG\SevenDays\Game1\Game1\bin\Windows\x86\Debug\Content\EspadaComum.xnb

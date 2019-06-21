@@ -23,7 +23,7 @@ namespace Game1
 
         Cenario cenario;
 
-        Elemento elemento, elemento2;
+        Elemento elemento, elemento2, elemento3;
 
         private SpriteFont font;
 
@@ -72,6 +72,7 @@ namespace Game1
             // INSTANCIAMENTO DO CINTO
             _personagem.cinto = new Cinto(600, 25, 400, 25, Content.Load<Texture2D>("buraco"), Color.White);
             _personagem.mochila = new Mochila((Window.ClientBounds.Width-100), 25, 50, 25, Content.Load<Texture2D>("buraco"), Color.White);
+            _personagem.armaEquipada = new ArmaEquipada(370, 25, 50, 25, Content.Load<Texture2D>("buraco"), Color.White);
 
             switch (faseAtual)
             {
@@ -90,10 +91,10 @@ namespace Game1
                          }
                          );
 
-                        elemento = new Elemento("pocao", 1500, 500, 60, 60, Content.Load<Texture2D>("poção"), Color.White, 0,0);
-                        //elemento = new Elemento("pocao",500, 500, 100, 100, Content.Load<Texture2D>("poção"), Color.White);
-                        elemento2 = new Elemento("espada", 800, 500, 100, 100, Content.Load<Texture2D>("espada"), Color.White, 0,30);
-                        
+                        elemento = new Elemento("pocao", 1500, 500, 60, 60, Content.Load<Texture2D>("poção"), Color.White, 0,0);                       
+                        elemento2 = new Elemento("espada", 800, 500, 100, 100, Content.Load<Texture2D>("espada"), Color.White, 0,100);
+                        elemento3 = new Elemento("EspadaComum", 1000, 500, 100, 100, Content.Load<Texture2D>("EspadaComum"), Color.White, 0, 30);
+
 
                         break;
                     }
@@ -186,9 +187,11 @@ namespace Game1
 
             spriteBatch.Draw(Content.Load<Texture2D>("mochila"), new Rectangle((Window.ClientBounds.Width - 180), 25, 80, 60), Color.White);
             spriteBatch.Draw(Content.Load<Texture2D>("cinto2"), new Rectangle(500, 25, 80, 60), Color.White);
+            spriteBatch.Draw(Content.Load<Texture2D>("espadaCruzada"), new Rectangle(300, 25, 60, 60), Color.White);
 
             _personagem.cinto.Draw(spriteBatch, gameTime,_personagem);
             _personagem.mochila.Draw(spriteBatch, gameTime, _personagem);
+            _personagem.armaEquipada.Draw(spriteBatch, gameTime, _personagem);
             _personagem.Draw(ref spriteBatch);
             inimigo.Draw(ref spriteBatch);
             _personagem.barraVida.Draw(spriteBatch, gameTime, _personagem);
@@ -214,6 +217,7 @@ namespace Game1
 
             elemento.Draw(spriteBatch, gameTime, _personagem);
             elemento2.Draw(spriteBatch, gameTime, _personagem);
+            elemento3.Draw(spriteBatch, gameTime, _personagem);
 
             spriteBatch.End();
             

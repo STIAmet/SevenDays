@@ -1,5 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../../../../zumbie1.png","C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/bin/Windows/zumbie1.xnb","TextureProcessor","Texture2DContent",337973,1920085,0,2173405
-"C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../Background.png","C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/bin/Windows/Background.xnb","TextureProcessor","Texture2DContent",40146,460885,0,0229387
-"C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/background.png","C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/bin/Windows/background.xnb","TextureProcessor","Texture2DContent",42019,1280085,0,0478716
-"C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/score.spritefont","C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/bin/Windows/score.xnb","FontDescriptionProcessor","SpriteFontContent",2014,37905,0,2563145
+"C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../Background.png","C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/bin/Windows/Background.xnb","TextureProcessor","Texture2DContent",40146,460885,0,1794996
+"C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/background.png","C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/bin/Windows/background.xnb","TextureProcessor","Texture2DContent",42019,1280085,0,0608365
+"C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/EspadaComum.png","C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/bin/Windows/EspadaComum.xnb","TextureProcessor","Texture2DContent",1572,147541,0,3345992

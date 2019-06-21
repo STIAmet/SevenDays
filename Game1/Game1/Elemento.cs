@@ -9,7 +9,6 @@ namespace Game1
 {
     public class Elemento
     {
-        public bool tipo; //Arma ou poção
         public string nome;
         public int peso;
         public int ataque=0; //arma
@@ -48,47 +47,69 @@ namespace Game1
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime, heroi personagem)
         {
             #region USAR_ITENS
-            for (int i = 0; i < personagem.cinto.maxElementos; i++)
-            {
-                if (personagem.cinto.posicaoCinto[i] == true)
-                {
-                    if ((new Rectangle(personagem.cinto.xBase + (i * 75), personagem.cinto.yBase, 50, 50).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Keyboard.GetState().IsKeyDown(Keys.Space)))
-                    {
 
-                        if (personagem.cinto.elementos[i].ataque == 0)
-                        {
-                            personagem.barraVida.Pocao(cura);
-                        }
-                        else if(this.ataque>0) {
-                            //equipar espada TODO
-                        }
-                        return;
-
-                    }
-                }
-            }
-            if (personagem.mochila.elementos.Count != 0)
-            {
-                if (personagem.mochila.elementos.Peek().nome == this.nome)
+                #region Cinto
+                for (int i = 0; i < personagem.cinto.maxElementos; i++)
                 {
-                    if ((new Rectangle(personagem.mochila.xBase, personagem.mochila.yBase, 50, 50).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Keyboard.GetState().IsKeyDown(Keys.Space)))
+                    if (personagem.cinto.posicaoCinto[i] == true)
                     {
-                        if (personagem.mochila.click == false)// Isso serve apenas para evitar que quando o usuario clique, seja contado varios cliques.(Sem isso, a mochila inteira seria dropada)
+                        if ((new Rectangle(personagem.cinto.xBase + (i * 75), personagem.cinto.yBase, 50, 50).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Keyboard.GetState().IsKeyDown(Keys.Space)))
                         {
+
+                            if (personagem.cinto.elementos[i].ataque == 0)
+                            {
+                                personagem.barraVida.Pocao(cura);
+                                personagem.cinto.Remover(i, personagem.cinto.elementos[i].nome);
+                            }
+                            else if(this.ataque>0) {
+                            
+                                personagem.armaEquipada.AddCinto(i, personagem);
+                                personagem.armaEquipada.click = true;
+                            }
                             return;
-                        }
 
+                        }
                     }
                 }
-            }
-            if (Mouse.GetState().MiddleButton == ButtonState.Released)
+            #endregion
+
+                #region Mochila
+                if (personagem.mochila.elementos.Count != 0)
+                {
+                    if (personagem.mochila.elementos.Peek().nome == this.nome)
+                    {
+                        if ((new Rectangle(personagem.mochila.xBase, personagem.mochila.yBase, 50, 50).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Keyboard.GetState().IsKeyDown(Keys.Space)))
+                        {
+                        
+                            if (personagem.mochila.elementos.Peek().ataque == 0)
+                            {
+                                personagem.barraVida.Pocao(cura);
+                                personagem.mochila.Remover(personagem.mochila.elementos.Peek().nome);
+                            }
+                            else if (this.ataque > 0)
+                            {
+
+                                personagem.armaEquipada.AddMochila(personagem);
+                                personagem.armaEquipada.click = true;
+                            }
+                            return;
+
+                        }
+                    }
+                }
+                #endregion
+
+            if (Keyboard.GetState().IsKeyUp(Keys.Space)) //ISSO É USADO PARA EVITAR MULTIPLOS CLIQUES
             {
-                personagem.mochila.click = false;
+                personagem.armaEquipada.click = false;
             }
+
             #endregion
 
 
             #region Dropar_Itens
+
+            #region Cinto
             for (int i = 0; i < personagem.cinto.maxElementos; i++)
             {
                 if (personagem.cinto.posicaoCinto[i] == true)
@@ -107,6 +128,9 @@ namespace Game1
                     }
                 }
             }
+            #endregion
+
+            #region Mochila
             if (personagem.mochila.elementos.Count!=0) 
             {
                 if (personagem.mochila.elementos.Peek().nome == this.nome)
@@ -132,6 +156,8 @@ namespace Game1
             {
                 personagem.mochila.click = false;
             }
+            #endregion
+
             #endregion
 
 

@@ -67,9 +67,9 @@ namespace Game1
             if (isVisible)
             {
                 lastHit += gameTime.ElapsedGameTime;
-                if ((lastHit > TimeSpan.FromMilliseconds(2000)) && (new Rectangle((int)this.Posicao.X, (int)this.Posicao.Y, this._frameLargura, this._frameAltura).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Mouse.GetState().LeftButton == ButtonState.Pressed))
+                if ((lastHit > TimeSpan.FromMilliseconds(1000)) && (new Rectangle((int)this.Posicao.X, (int)this.Posicao.Y, this._frameLargura, this._frameAltura).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Mouse.GetState().LeftButton == ButtonState.Pressed))
                 {
-                    RecebeDano(50);                   
+                    RecebeDano(personagem.ataque);                   
                     lastHit = TimeSpan.Zero;
                 }
                 double tempoDecorridoJogo = gameTime.ElapsedGameTime.TotalSeconds;
