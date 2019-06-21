@@ -78,7 +78,7 @@ namespace Game1
                 lastHit += gameTime.ElapsedGameTime;
                 if ((lastHit > TimeSpan.FromMilliseconds(1000)) && (new Rectangle((int)this.Posicao.X, (int)this.Posicao.Y, this._frameLargura, this._frameAltura).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Mouse.GetState().LeftButton == ButtonState.Pressed))
                 {
-                    if (personagem.Posicao.X - this.Posicao.X < personagem.armaEquipada.elementos.range && personagem.Posicao.X - this.Posicao.X > -1*personagem.armaEquipada.elementos.range)
+                    if (personagem.Posicao.X - this.Posicao.X < personagem.range && personagem.Posicao.X - this.Posicao.X > -1*personagem.range)
                     {
                         RecebeDano(personagem.ataque);
                         lastHit = TimeSpan.Zero;

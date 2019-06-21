@@ -25,6 +25,7 @@ namespace Game1
         public ArmaEquipada armaEquipada;
         public float distance = 0;
         public int ataque = 10;
+        public int range = 100;
 
 
         public int xFixoCenario;

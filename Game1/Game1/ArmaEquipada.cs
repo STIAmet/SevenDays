@@ -51,6 +51,7 @@ namespace Game1
                     this.elementos = aux;                    
                 }
                 personagem.ataque = elementos.ataque;
+                personagem.range = elementos.range;
             }
            
         }
@@ -72,6 +73,7 @@ namespace Game1
                     this.elementos = aux;
                 }
                 personagem.ataque = elementos.ataque;
+                personagem.range = elementos.range;
             }
 
         }
