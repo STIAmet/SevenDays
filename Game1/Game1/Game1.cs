@@ -67,7 +67,7 @@ namespace Game1
             _personagem.xFixoCenario = Window.ClientBounds.Width;
 
             //BARRA DE VIDA
-            _personagem.barraVida = new BarraVida(0,0, 50, 25, 100, 25, Content.Load<Texture2D>("Vida"), Content.Load<Texture2D>("Barra_vida"),Content.Load<Texture2D>("fundo_barra"), Color.White, 3, Content.Load<Texture2D>("qtd_vida"));
+            _personagem.barraVida = new BarraVida(50, 23, 100, 25, Content.Load<Texture2D>("Vida"), Content.Load<Texture2D>("Barra_vida"),Content.Load<Texture2D>("fundo_barra"), Color.White, 3, Content.Load<Texture2D>("qtd_vida"));
 
             // INSTANCIAMENTO DO CINTO
             _personagem.cinto = new Cinto(600, 25, 400, 25, Content.Load<Texture2D>("buraco"), Color.White);
