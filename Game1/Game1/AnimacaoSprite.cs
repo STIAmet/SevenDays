@@ -10,8 +10,8 @@ namespace Game1
         public bool Ativado = false;
         public Vector2 Posicao = new Vector2(0, 450);
 
-        public abstract int TotalLinhasNaSprite { get; }
-        public abstract int TotalColunasNaSprite { get; }
+        public int TotalLinhasNaSprite { get; set; }
+        public int TotalColunasNaSprite { get; set; }
 
         public Texture2D _textura;
         public int _frameLargura;

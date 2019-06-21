@@ -9,10 +9,12 @@ namespace Game1
 {
     public class Elemento
     {
+
         public string nome;
         public int peso;
         public int ataque=0; //arma
         public int cura=0; //poção
+        public int range;
         private SpriteFont font;
         private int score = 0;
         public int xBase;
@@ -22,6 +24,7 @@ namespace Game1
         public Texture2D textura;
         public Color cor;
         public bool IsVisible;
+        
 
         //public Elemento(Game game) : base(game)
         //{
@@ -29,7 +32,7 @@ namespace Game1
         //    font = game.Content.Load<SpriteFont>("score");
 
         //}
-        public Elemento(string nomezinho,int xBasinha, int yBasinha, int xTamainho, int yTamainho, Texture2D text, Color corzinha, int _cura, int _ataque, bool visible = true)
+        public Elemento(string nomezinho,int xBasinha, int yBasinha, int xTamainho, int yTamainho, Texture2D text, Color corzinha, int _cura, int _ataque, int _range=100,bool visible = true)
         {
             xBase = xBasinha;
             yBase = yBasinha;
@@ -41,15 +44,19 @@ namespace Game1
             nome = nomezinho;
             cura = _cura;
             ataque = _ataque;
+            range = _range;
+            
         }
 
 
-        public void Draw(SpriteBatch spriteBatch, GameTime gameTime, heroi personagem)
+        public void Draw(SpriteBatch spriteBatch, GameTime gameTime, Microsoft.Xna.Framework.Content.ContentManager Content , heroi personagem)
         {
+            font = Content.Load<SpriteFont>("score");
+
             #region USAR_ITENS
 
-                #region Cinto
-                for (int i = 0; i < personagem.cinto.maxElementos; i++)
+            #region Cinto
+            for (int i = 0; i < personagem.cinto.maxElementos; i++)
                 {
                     if (personagem.cinto.posicaoCinto[i] == true)
                     {
@@ -160,6 +167,7 @@ namespace Game1
 
             #endregion
 
+             
 
             if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Right))
             {
@@ -184,7 +192,11 @@ namespace Game1
             else
             if ((new Rectangle(xBase, yBase, xTamanho, yTamanho).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && !(Mouse.GetState().LeftButton == ButtonState.Pressed || Mouse.GetState().RightButton == ButtonState.Pressed))
             {
+
                 spriteBatch.Draw(textura, new Rectangle(xBase, yBase, xTamanho, yTamanho), Color.Blue);
+                spriteBatch.Draw( Content.Load<Texture2D>("Balawn"), new Rectangle(this.xBase - 30, this.yBase - 110, 180, 100), Color.White);
+                spriteBatch.DrawString(font, "Ataque:"+this.ataque+"\nCura:"+this.cura , new Vector2(this.xBase - 10, this.yBase - 100), Color.Black);
+
             }
             else if ((new Rectangle(xBase, yBase, xTamanho, yTamanho).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Mouse.GetState().LeftButton == ButtonState.Pressed))
             {

@@ -13,8 +13,8 @@ namespace Game1
 {
     public class heroi: AnimacaoSprite
     {
-        private SpriteFont font;
-        private int score = 0;
+        public SpriteFont font;
+        public int score = 0;
         public float caixas;
         private int i = 0;
         public string nome = "";
@@ -29,8 +29,12 @@ namespace Game1
 
         public int xFixoCenario;
 
-        public override int TotalLinhasNaSprite => 2;
-        public override int TotalColunasNaSprite => 8;
+        
+        public heroi()
+        {
+            TotalLinhasNaSprite = 2;
+            TotalColunasNaSprite = 8;
+        }
 
         public Vector2 Velocidade = new Vector2(300f);
         

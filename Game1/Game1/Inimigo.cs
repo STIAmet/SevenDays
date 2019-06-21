@@ -19,21 +19,30 @@ namespace Game1
         public int nivelDano;
         public int frequenciaDano;
         public int distanciaPerseguir;
-
-
-        public override int TotalLinhasNaSprite => 4;
-        public override int TotalColunasNaSprite => 6;
+        public int AndarDireita, AndarEsquerda, AtacarDireita, AtacarEsquerda; //ISSO É USADO PARA PASSAR NA FUNÇÃO ANIMAÇÃO() Representar o Y da linha desejada na sprite do Inimigo.
+        public int delayEntreFrames; // Indica a demora entre a passagem de cada frame da Sprite
 
         public Vector2 Velocidade = new Vector2(300f);
 
 
-        public Inimigo(int _vida, int _posX, int _posY, int _nivelDano, int _frequenciaDano=3000, int _distanciaPerseguir=1000)
+        public Inimigo(int _vida, int _posX, int _posY, int _nivelDano, int linhasSprite, int colunasSprite, int _AndarDireita, int _AndarEsquerda, int _AtacarDireita, int _AtacarEsquerda, int _delay=200, int _frequenciaDano = 3000, int _distanciaPerseguir = 1000)
         {
             vida = _vida;
             Posicao = new Vector2(_posX, _posY);
             nivelDano = _nivelDano;
             frequenciaDano = _frequenciaDano;
             distanciaPerseguir = _distanciaPerseguir;
+
+
+            TotalLinhasNaSprite = linhasSprite;
+            TotalColunasNaSprite = colunasSprite;
+
+            AndarDireita = _AndarDireita;
+            AndarEsquerda = _AndarEsquerda;
+            AtacarDireita = _AtacarDireita; 
+            AtacarEsquerda = _AtacarEsquerda;
+
+            delayEntreFrames = _delay;
 
         }
 
@@ -69,8 +78,22 @@ namespace Game1
                 lastHit += gameTime.ElapsedGameTime;
                 if ((lastHit > TimeSpan.FromMilliseconds(1000)) && (new Rectangle((int)this.Posicao.X, (int)this.Posicao.Y, this._frameLargura, this._frameAltura).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Mouse.GetState().LeftButton == ButtonState.Pressed))
                 {
-                    RecebeDano(personagem.ataque);                   
-                    lastHit = TimeSpan.Zero;
+                    if (personagem.Posicao.X - this.Posicao.X < personagem.armaEquipada.elementos.range && personagem.Posicao.X - this.Posicao.X > -1*personagem.armaEquipada.elementos.range)
+                    {
+                        RecebeDano(personagem.ataque);
+                        lastHit = TimeSpan.Zero;
+                    }
+                }
+                else
+                {
+                    if (lastHit < TimeSpan.FromMilliseconds(400))
+                    {
+                        this.cor = Color.Red;
+                    }
+                    else
+                    {
+                        this.cor = Color.White;
+                    }
                 }
                 double tempoDecorridoJogo = gameTime.ElapsedGameTime.TotalSeconds;
                 if (isVisible && (personagem.Posicao.X - this.Posicao.X < distanciaPerseguir && personagem.Posicao.X - this.Posicao.X > -1*distanciaPerseguir))
@@ -79,14 +102,16 @@ namespace Game1
                     if (personagem.Posicao.X - this.Posicao.X > 75)
                     {
                         Ativado = true;
-                        Animacao(ref gameTime, 000);
+                        Animacao(ref gameTime, AndarDireita);
                         this.Posicao.X += 2;
+                        lastAtak = TimeSpan.Zero;
                     }
                     else if (personagem.Posicao.X - this.Posicao.X < -75)
                     {
                         Ativado = true;
-                        Animacao(ref gameTime, 300);
+                        Animacao(ref gameTime, AndarEsquerda);
                         this.Posicao.X -= 2;
+                        lastAtak = TimeSpan.Zero;
                     }
                     else
                     {
@@ -95,7 +120,7 @@ namespace Game1
                         if (personagem.Posicao.X - this.Posicao.X > 0)
                         {
                             Ativado = true;
-                            Animacao(ref gameTime, 150, 200);
+                            Animacao(ref gameTime, AtacarDireita, delayEntreFrames);
                             if (lastAtak >= TimeSpan.FromMilliseconds(frequenciaDano))
                             {
                                 personagem.barraVida.GameOver(nivelDano);
@@ -106,7 +131,7 @@ namespace Game1
                         else if (personagem.Posicao.X - this.Posicao.X < 0)
                         {
                             Ativado = true;
-                            Animacao(ref gameTime, 450, 200);
+                            Animacao(ref gameTime, AtacarEsquerda, delayEntreFrames);
                             if (lastAtak >= TimeSpan.FromMilliseconds(frequenciaDano))
                             {
                                 personagem.barraVida.GameOver(nivelDano);

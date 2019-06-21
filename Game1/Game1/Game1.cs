@@ -30,7 +30,9 @@ namespace Game1
         Song music;
 
         heroi _personagem = new heroi();
-        Inimigo inimigo = new Inimigo(100, 500,420,2);
+        Inimigo inimigo = new Inimigo(100, 500,420,2, 4, 6,0, 300, 150,450);
+        Inimigo inimigo2 = new Inimigo(50, 1500, 520, 2, 4, 7, 60, 180, 0, 120, 100);
+
 
         public List<BaseElementoX> listTree = new List<BaseElementoX>();
 
@@ -92,8 +94,8 @@ namespace Game1
                          );
 
                         elemento = new Elemento("pocao", 1500, 500, 60, 60, Content.Load<Texture2D>("poção"), Color.White, 0,0);                       
-                        elemento2 = new Elemento("espada", 800, 500, 100, 100, Content.Load<Texture2D>("espada"), Color.White, 0,100);
-                        elemento3 = new Elemento("EspadaComum", 1000, 500, 100, 100, Content.Load<Texture2D>("EspadaComum"), Color.White, 0, 30);
+                        elemento2 = new Elemento("espada", 800, 500, 100, 100, Content.Load<Texture2D>("espada"), Color.White, 0,100, 200);
+                        elemento3 = new Elemento("EspadaComum", 1000, 500, 100, 100, Content.Load<Texture2D>("EspadaComum"), Color.White, 0, 30, 100);
 
 
                         break;
@@ -138,6 +140,7 @@ namespace Game1
 
             _personagem.LoadContent(Content, "character");
             inimigo.LoadContent(Content, "zumbie1");
+            inimigo2.LoadContent(Content, "esqueleto1");
         }
         
         protected override void UnloadContent()
@@ -161,6 +164,7 @@ namespace Game1
             
 
             inimigo.Mover(ref gameTime, _personagem);
+            inimigo2.Mover(ref gameTime, _personagem);
 
             base.Update(gameTime);
         }
@@ -194,6 +198,7 @@ namespace Game1
             _personagem.armaEquipada.Draw(spriteBatch, gameTime, _personagem);
             _personagem.Draw(ref spriteBatch);
             inimigo.Draw(ref spriteBatch);
+            inimigo2.Draw(ref spriteBatch);
             _personagem.barraVida.Draw(spriteBatch, gameTime, _personagem);
                 
 
@@ -215,9 +220,9 @@ namespace Game1
                 spriteBatch.DrawString(font, "Digite seu nome e aperte enter para salvar:\n" + key._stringValue, new Vector2(60, 110), Color.Black);
             }
 
-            elemento.Draw(spriteBatch, gameTime, _personagem);
-            elemento2.Draw(spriteBatch, gameTime, _personagem);
-            elemento3.Draw(spriteBatch, gameTime, _personagem);
+            elemento.Draw(spriteBatch, gameTime, Content, _personagem);
+            elemento2.Draw(spriteBatch, gameTime, Content, _personagem);
+            elemento3.Draw(spriteBatch, gameTime, Content, _personagem);
 
             spriteBatch.End();
             
