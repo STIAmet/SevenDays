@@ -31,35 +31,38 @@ namespace Game1
         }
 
         public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime,heroi personagem)
-        { 
-            if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Right))
+        { if (personagem.nome != "")
             {
-                // Direita
-                if (Keyboard.GetState().IsKeyDown(Keys.Right))
+                if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) || Keyboard.GetState().IsKeyDown(Keys.A))
                 {
-                    if (personagem.Posicao.X >= (0.7 * personagem.xFixoCenario))
+                    // Direita
+                    if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
                     {
-                        xBase -= (int)(personagem.Velocidade.X * (gameTime.ElapsedGameTime.TotalSeconds));
+                        if (personagem.Posicao.X >= (0.7 * personagem.xFixoCenario))
+                        {
+                            xBase -= (int)(personagem.Velocidade.X * (gameTime.ElapsedGameTime.TotalSeconds));
 
+                        }
                     }
-                }
-                else
-                {
-                    if (personagem.Posicao.X <= (0.1 * personagem.xFixoCenario))
+                    else
                     {
-                        xBase += (int)(personagem.Velocidade.X * (gameTime.ElapsedGameTime.TotalSeconds));
+                        if (personagem.Posicao.X <= (0.1 * personagem.xFixoCenario))
+                        {
+                            xBase += (int)(personagem.Velocidade.X * (gameTime.ElapsedGameTime.TotalSeconds));
+                        }
                     }
                 }
+                if (xBase <= xTamanho * -1)
+                {
+                    xBase = personagem.xFixoCenario + xTamanho;
+                }
+                else if (xBase >= xTamanho + personagem.xFixoCenario)
+                {
+                    xBase = -xTamanho;
+                }
             }
-            if (xBase <= xTamanho * -1)
-            {
-                xBase = personagem.xFixoCenario + xTamanho;
-            }
-            else if (xBase >= xTamanho + personagem.xFixoCenario)
-            {
-                xBase = -xTamanho;
-            }
-            spriteBatch.Draw(textura, new Rectangle(xBase, yBase, xTamanho, yTamanho), cor);
+                spriteBatch.Draw(textura, new Rectangle(xBase, yBase, xTamanho, yTamanho), cor);
+            
             
         }
     }

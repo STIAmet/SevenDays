@@ -77,6 +77,10 @@ namespace Game1
             }
 
         }
+        public void Remover()
+        {
+            elementos = null;
+        }
 
         public virtual void Draw(SpriteBatch spriteBatch, GameTime gameTime, heroi personagem)
         {            

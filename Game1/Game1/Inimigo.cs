@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace Game1
 {
-    class Inimigo:AnimacaoSprite
+    public class Inimigo:AnimacaoSprite
     {
 
+        public string nome;
         public int vida;
         public bool isVisible=true;
         public TimeSpan lastHit = new TimeSpan();
@@ -22,11 +23,12 @@ namespace Game1
         public int AndarDireita, AndarEsquerda, AtacarDireita, AtacarEsquerda; //ISSO É USADO PARA PASSAR NA FUNÇÃO ANIMAÇÃO() Representar o Y da linha desejada na sprite do Inimigo.
         public int delayEntreFrames; // Indica a demora entre a passagem de cada frame da Sprite
 
-        public Vector2 Velocidade = new Vector2(300f);
+        public Vector2 Velocidade;
 
 
-        public Inimigo(int _vida, int _posX, int _posY, int _nivelDano, int linhasSprite, int colunasSprite, int _AndarDireita, int _AndarEsquerda, int _AtacarDireita, int _AtacarEsquerda, int _delay=200, int _frequenciaDano = 3000, int _distanciaPerseguir = 1000)
+        public Inimigo(string _nome, int _vida, int _posX, int _posY, int _nivelDano, int linhasSprite, int colunasSprite, int _AndarDireita, int _AndarEsquerda, int _AtacarDireita, int _AtacarEsquerda, int velocidade=100, int _delay=200, int _frequenciaDano = 3000, int _distanciaPerseguir = 1000)
         {
+            nome = _nome;
             vida = _vida;
             Posicao = new Vector2(_posX, _posY);
             nivelDano = _nivelDano;
@@ -44,6 +46,8 @@ namespace Game1
 
             delayEntreFrames = _delay;
 
+            Velocidade = new Vector2(velocidade, 0);
+
         }
 
         public void Mover(ref GameTime gameTime, heroi personagem)
@@ -54,10 +58,10 @@ namespace Game1
                 isVisible = false;
             }
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Right))
+            if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Right)|| Keyboard.GetState().IsKeyDown(Keys.D) || Keyboard.GetState().IsKeyDown(Keys.A))
             {
                 // Direita
-                if (Keyboard.GetState().IsKeyDown(Keys.Right))
+                if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
                 {
                     if (personagem.Posicao.X >= (0.7 * personagem.xFixoCenario))
                     {
@@ -103,14 +107,14 @@ namespace Game1
                     {
                         Ativado = true;
                         Animacao(ref gameTime, AndarDireita);
-                        this.Posicao.X += 2;
+                        this.Posicao.X +=(float) (Velocidade.X* gameTime.ElapsedGameTime.TotalSeconds);
                         lastAtak = TimeSpan.Zero;
                     }
                     else if (personagem.Posicao.X - this.Posicao.X < -75)
                     {
                         Ativado = true;
                         Animacao(ref gameTime, AndarEsquerda);
-                        this.Posicao.X -= 2;
+                        this.Posicao.X -= (float)(Velocidade.X * gameTime.ElapsedGameTime.TotalSeconds);
                         lastAtak = TimeSpan.Zero;
                     }
                     else

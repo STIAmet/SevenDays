@@ -24,6 +24,7 @@ namespace Game1
         public Texture2D textura;
         public Color cor;
         public bool IsVisible;
+        public int posicaoInicial;
         
 
         //public Elemento(Game game) : base(game)
@@ -45,12 +46,14 @@ namespace Game1
             cura = _cura;
             ataque = _ataque;
             range = _range;
+            posicaoInicial = xBasinha;
             
         }
 
 
         public void Draw(SpriteBatch spriteBatch, GameTime gameTime, Microsoft.Xna.Framework.Content.ContentManager Content , heroi personagem)
         {
+            
             font = Content.Load<SpriteFont>("score");
 
             #region USAR_ITENS
@@ -80,7 +83,7 @@ namespace Game1
                 }
             #endregion
 
-                #region Mochila
+            #region Mochila
                 if (personagem.mochila.elementos.Count != 0)
                 {
                     if (personagem.mochila.elementos.Peek().nome == this.nome)
@@ -167,23 +170,25 @@ namespace Game1
 
             #endregion
 
-             
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Right))
+            if (personagem.nome != "")
             {
-                // Direita
-                if (Keyboard.GetState().IsKeyDown(Keys.Right))
+                if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D) || Keyboard.GetState().IsKeyDown(Keys.A))
                 {
-                    if (personagem.Posicao.X >= (0.7 * personagem.xFixoCenario))
+                    // Direita
+                    if (Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D))
                     {
-                        xBase -= (int)(personagem.Velocidade.X * (gameTime.ElapsedGameTime.TotalSeconds));
+                        if (personagem.Posicao.X >= (0.7 * personagem.xFixoCenario))
+                        {
+                            xBase -= (int)(personagem.Velocidade.X * (gameTime.ElapsedGameTime.TotalSeconds));
+                        }
                     }
-                }
-                else
-                {
-                    if (personagem.Posicao.X <= (0.1 * personagem.xFixoCenario))
+                    else
                     {
-                        xBase += (int)(personagem.Velocidade.X * (gameTime.ElapsedGameTime.TotalSeconds));
+                        if (personagem.Posicao.X <= (0.1 * personagem.xFixoCenario))
+                        {
+                            xBase += (int)(personagem.Velocidade.X * (gameTime.ElapsedGameTime.TotalSeconds));
+                        }
                     }
                 }
             }
@@ -196,7 +201,7 @@ namespace Game1
                 spriteBatch.Draw(textura, new Rectangle(xBase, yBase, xTamanho, yTamanho), Color.Blue);
                 spriteBatch.Draw( Content.Load<Texture2D>("Balawn"), new Rectangle(this.xBase - 30, this.yBase - 110, 180, 100), Color.White);
                 spriteBatch.DrawString(font, "Ataque:"+this.ataque+"\nCura:"+this.cura , new Vector2(this.xBase - 10, this.yBase - 100), Color.Black);
-
+                
             }
             else if ((new Rectangle(xBase, yBase, xTamanho, yTamanho).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Mouse.GetState().LeftButton == ButtonState.Pressed))
             {

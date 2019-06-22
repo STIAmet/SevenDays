@@ -12,7 +12,7 @@ namespace Game1
     {
         public Texture2D Vida;
         public int qtdVida = 3;
-        public int vidaAgora = 100;
+        public int vidaAgora = 70;
         public int [] ataque = new int [3];
         public int[] pocao = new int[2];
         public int xBase;
@@ -52,12 +52,10 @@ namespace Game1
         }
 
 
-        public int Pocao(int nivelPocao)
+        public int Pocao(int curaPocao)
         {
-            pocao[0] = 5;
-            pocao[1] = 100;
 
-            vidaAgora += pocao[nivelPocao];
+            vidaAgora += curaPocao;
 
             if (vidaAgora >= 100)
                 vidaAgora = 100;
@@ -73,7 +71,7 @@ namespace Game1
 
             vidaAgora -= ataque[nivelInimigo];
 
-            if (vidaAgora <= 0 && qtdVida > 0)
+            if (vidaAgora <= 0 && qtdVida < 0)
                 return - 1; //nesse caso retornaria ao inicio da fase
 
             else

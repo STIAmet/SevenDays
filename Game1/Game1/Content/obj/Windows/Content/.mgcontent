@@ -4,6 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../../../../Golem2.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../../../../zumbie1.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../Background.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/arma.png</File>
@@ -57,6 +58,7 @@
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/zumbie2.png</File>
   </SourceFiles>
   <DestFiles>
+    <File>Golem2.png</File>
     <File>zumbie1.png</File>
     <File>Background.png</File>
     <File xsi:nil="true" />
