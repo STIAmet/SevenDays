@@ -13,7 +13,7 @@ namespace Game1
         public Texture2D Vida;
         public int qtdVida = 3;
         public int vidaAgora = 70;
-        public int [] ataque = new int [3];
+        public int [] ataque = new int [4];
         public int[] pocao = new int[2];
         public int xBase;
         public int yBase;
@@ -23,6 +23,7 @@ namespace Game1
         public Texture2D texturaBarra;
         public Texture2D texturaFundo;
         public Color cor;
+        public TimeSpan tempoCura; 
 
         public BarraVida(int xBasinha, int yBasinha, int xTamainho, int yTamainho, Texture2D textVida, Texture2D textBarra, Texture2D textFundo, Color corzinha, int qtd_vida, Texture2D textCorVida)
         {
@@ -52,15 +53,21 @@ namespace Game1
         }
 
 
-        public int Pocao(int curaPocao)
+        public bool Pocao(int curaPocao)
         {
+            if (tempoCura>= TimeSpan.FromMilliseconds(1000))
+            {
+                vidaAgora += curaPocao;
+                tempoCura = TimeSpan.Zero;
 
-            vidaAgora += curaPocao;
+                if (vidaAgora >= 100)
+                    vidaAgora = 100;
 
-            if (vidaAgora >= 100)
-                vidaAgora = 100;
+                return true;
+            }
+            
 
-            return vidaAgora;
+            return false;
         }
 
         public int GameOver (int nivelInimigo)
@@ -68,6 +75,7 @@ namespace Game1
             ataque[0]=5;
             ataque[1]=15;
             ataque[2]=25;
+            ataque[3]=35;
 
             vidaAgora -= ataque[nivelInimigo];
 

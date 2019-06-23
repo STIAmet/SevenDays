@@ -4,16 +4,27 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../../../../finalBom.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../../../../Golem2.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../../../../groot.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../../../../ogro.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../../../../quadroFala.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../../../../startFloresta.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../../../../zumbie1.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/../../Background.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/arma.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/arvoreDark1.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/arvoreDark2.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/arvoreDark3.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/arvoreNeve.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/back.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/back1.jpg</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/background.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/backNeve.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/balao.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/Balawn.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/Barra_vida.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/BossCenary.jpg</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/bruxa1.jpg</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/buraco.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/casa2.png</File>
@@ -29,6 +40,10 @@
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/EspadaComum.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/espadaCruzada.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/esqueleto1.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/finalBom.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/finalRuim.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/forestDark.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/ForestDay.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/forest-game-background-2d.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/fundo_barra.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/GameOver.gif</File>
@@ -36,10 +51,15 @@
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/idle002.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/idle003.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/idle004.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/mago.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/mochila.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/ogro.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/pedraNeve.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/personagem.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/poção.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/Princesa.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/qtd_vida.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/quadroFala.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/run001.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/run002.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/run003.png</File>
@@ -50,6 +70,10 @@
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/run008.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/score.spritefont</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/Shawn.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/startFloresta.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/startMontanha.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/startTutorial.png</File>
+    <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/startVilaBack.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/Tree.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/Tree2.png</File>
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/Tree3.png</File>
@@ -58,9 +82,33 @@
     <File>C:/Users/kevin/Desktop/RPG/SevenDays/Game1/Game1/Content/zumbie2.png</File>
   </SourceFiles>
   <DestFiles>
+    <File>finalBom.png</File>
     <File>Golem2.png</File>
+    <File>groot.png</File>
+    <File>ogro.png</File>
+    <File>quadroFala.png</File>
+    <File>startFloresta.png</File>
     <File>zumbie1.png</File>
     <File>Background.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

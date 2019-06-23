@@ -84,30 +84,36 @@ namespace Game1
             #endregion
 
             #region Mochila
-                if (personagem.mochila.elementos.Count != 0)
+            if (personagem.barraVida.tempoCura < TimeSpan.FromMilliseconds(2000))
+            {
+                personagem.barraVida.tempoCura += gameTime.ElapsedGameTime;
+            }
+            if (personagem.mochila.elementos.Count != 0)
+            {
+                if (personagem.mochila.elementos.Peek().nome == this.nome)
                 {
-                    if (personagem.mochila.elementos.Peek().nome == this.nome)
+                    if ((new Rectangle(personagem.mochila.xBase, personagem.mochila.yBase, 50, 50).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Keyboard.GetState().IsKeyDown(Keys.Space)))
                     {
-                        if ((new Rectangle(personagem.mochila.xBase, personagem.mochila.yBase, 50, 50).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && (Keyboard.GetState().IsKeyDown(Keys.Space)))
-                        {
                         
-                            if (personagem.mochila.elementos.Peek().ataque == 0)
+                        if (personagem.mochila.elementos.Peek().ataque == 0)
+                        {
+                            if (personagem.barraVida.Pocao(cura))
                             {
-                                personagem.barraVida.Pocao(cura);
                                 personagem.mochila.Remover(personagem.mochila.elementos.Peek().nome);
                             }
-                            else if (this.ataque > 0)
-                            {
-
-                                personagem.armaEquipada.AddMochila(personagem);
-                                personagem.armaEquipada.click = true;
-                            }
-                            return;
-
                         }
+                        else if (this.ataque > 0)
+                        {
+
+                            personagem.armaEquipada.AddMochila(personagem);
+                            personagem.armaEquipada.click = true;
+                        }
+                        return;
+
                     }
                 }
-                #endregion
+            }
+            #endregion
 
             if (Keyboard.GetState().IsKeyUp(Keys.Space)) //ISSO É USADO PARA EVITAR MULTIPLOS CLIQUES
             {
@@ -132,6 +138,7 @@ namespace Game1
                             xBase = new Random().Next(Convert.ToInt32(personagem.Posicao.X - 100), Convert.ToInt32(personagem.Posicao.X + 100));
                             yBase = Convert.ToInt32((personagem.Posicao.Y + 100) - this.yTamanho);
                             IsVisible = true;
+                            
                         }
                         
 
@@ -194,8 +201,7 @@ namespace Game1
             }
             if (!IsVisible)
                 spriteBatch.Draw(textura, new Rectangle(xBase, yBase, xTamanho, yTamanho), Color.Transparent);
-            else
-            if ((new Rectangle(xBase, yBase, xTamanho, yTamanho).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && !(Mouse.GetState().LeftButton == ButtonState.Pressed || Mouse.GetState().RightButton == ButtonState.Pressed))
+            else  if ((new Rectangle(xBase, yBase, xTamanho, yTamanho).Contains(new Point(Mouse.GetState().X, Mouse.GetState().Y))) && !(Mouse.GetState().LeftButton == ButtonState.Pressed || Mouse.GetState().RightButton == ButtonState.Pressed))
             {
 
                 spriteBatch.Draw(textura, new Rectangle(xBase, yBase, xTamanho, yTamanho), Color.Blue);

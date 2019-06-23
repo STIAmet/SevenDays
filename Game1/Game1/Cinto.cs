@@ -89,7 +89,7 @@ namespace Game1
             {
                 if (posicaoCinto[i] == true)
                 {
-                    spriteBatch.Draw(elementos[i].textura, new Rectangle(xBase+(i*75), yBase, 50, 50), Color.White);
+                    spriteBatch.Draw(elementos[i].textura, new Rectangle(xBase+(i*75), yBase, 50, 50), elementos[i].cor);
                 }
                 else
                     spriteBatch.Draw(textura, new Rectangle(xBase + (i * 75), yBase, 50, 50), Color.White);

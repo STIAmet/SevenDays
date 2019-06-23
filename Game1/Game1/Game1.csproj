@@ -58,7 +58,9 @@
     <Compile Include="Inimigo.cs" />
     <Compile Include="KeyboardHelper.cs" />
     <Compile Include="Loader.cs" />
+    <Compile Include="Mago.cs" />
     <Compile Include="Mochila.cs" />
+    <Compile Include="Princesa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sprite.cs" />

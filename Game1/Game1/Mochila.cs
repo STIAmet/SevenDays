@@ -53,7 +53,7 @@ namespace Game1
       
                 if (elementos.Count != 0)
                 {
-                    spriteBatch.Draw(elementos.Peek().textura, new Rectangle(xBase, yBase, 50, 50), Color.White);
+                    spriteBatch.Draw(elementos.Peek().textura, new Rectangle(xBase, yBase, 50, 50), elementos.Peek().cor);
                 }
                 else
                     spriteBatch.Draw(textura, new Rectangle(xBase, yBase, 50, 50), Color.White);
